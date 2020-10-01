@@ -6,7 +6,7 @@ import { handleError } from '../utils/error'
 const db = new JsonDB(new Config('student-db', true, false, '/'));
 const DB_NAME = '/student-db'
 
-export const get = (id: string) => {
+export const get = (id: string | string[]) => {
     try {
         return db.getData(`${DB_NAME}/${id}`);
     } catch (e) {
@@ -41,7 +41,9 @@ export const count = () => {
 export const create = (data) => {
     try {
         const {id} = data
-        let newObject = {}
+        let newObject = {
+            json: {}
+        }
         newObject[id] = id
         newObject.json = data
 

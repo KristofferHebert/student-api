@@ -10,10 +10,7 @@ const cors = Cors({
 
 
 const GET = (req: NextApiRequest, res: NextApiResponse) => {
-    const {
-        query: { id },
-      } = req
-
+    const id = req.query.id
     try {
         res.statusCode = 200
         return res.json({ message: 'success', data: db.get(id) })
