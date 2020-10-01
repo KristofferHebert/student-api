@@ -14,10 +14,11 @@ export const Header: React.FC<HeadProps> = ({ title }) => {
                 <title> {title} | Student API</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <aside className="pure-u-1-3">
+            <aside className="pure-menu">
                 <nav>
-                    <ul>
-                        <li><Link href="/" as="/"><a>Home</a></Link></li>
+                    <span>MENU</span>
+                    <ul className="pure-menu-list">
+                        <li className="pure-menu-item"><Link href="/" as="/"><a className="pure-menu-link">Home</a></Link></li>
                     </ul>
                 </nav>
             </aside>

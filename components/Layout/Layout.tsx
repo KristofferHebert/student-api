@@ -9,13 +9,15 @@ interface LayoutProps {
 }
 
 export const Layout: React.FC<LayoutProps> = ({ title, children }) => (
-    <div className="container pure-g">
-        <Header title={title} />
-        <main className="pure-u-2-3">
-            {children}
-        </main>
+    <>
+        <div id="main-container">
+            <Header title={title} />
+            <main>
+                {children}
+            </main>
+        </div>
         <Footer />
-    </div>
+    </>
 )
 
 export default Layout

@@ -20,5 +20,33 @@ input {
 
 .container {
   max-width: 64rem;
+  padding: 1.5rem;
   margin: auto;
+}
+
+#main-container {
+  display: flex;
+}
+
+aside {
+  background-color: #ccc;
+  height: 80vh;
+  display: inline-block;
+  width: 10rem;
+  letter-spacing: 1px;
+}
+
+aside span {
+  padding-top: 1rem;
+  margin-left: 1rem;
+  display: block;
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  padding: 1.5rem;
+  border-top: 1px solid gray;
 }

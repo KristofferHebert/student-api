@@ -7,7 +7,7 @@ interface StudentItemProps {
     data: StudentProps;
 }
 const StudentItem: React.FC<StudentItemProps> = ({ data }) => (
-    <li><Link href={`student/${data.id}`} as={`student/${data.id}`} ><a>{data.first_name} {data.last_name}</a></Link></li>
+    <li><Link href={`student/[id]`} as={`student/${data.id}`} ><a>{data.first_name} {data.last_name}</a></Link></li>
 )
 
 interface StudentListProps {

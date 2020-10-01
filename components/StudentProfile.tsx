@@ -60,11 +60,24 @@ export const StudentProfile = ({ student }) => {
         setEditing(val)
     }
 
+    const handleDelete = (id) => {
+        return async (e) => {
+            e.preventDefault()
+            let response = await fetch('http://localhost:3000/api/student/' + id, {
+                method: 'DELETE'
+            })
+            
+            Router.push('/')
+
+        }
+    }
+
+
     if(isEditing) return <StudentProfileEdit studentProfile={studentProfile} setStudentProfile={setStudentProfile} setEditing={setEditing} />
 
     return (
         <div>
-            <h3>{studentProfile.first_name} {studentProfile.last_name} <a href="#" onClick={handleEditing(true)}>[edit]</a></h3>
+            <h3>{studentProfile.first_name} {studentProfile.last_name} <a href="#" onClick={handleEditing(true)}>[edit]</a> <a href="#" onClick={handleDelete(studentProfile.id)}>[delete]</a></h3>
         </div>
     )
 }

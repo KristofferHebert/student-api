@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const Footer: React.FC = () => (
-    <footer className="container pure-g">
+    <footer>
         <div className="pure-u-5-5">
             <p>Copyright © {new Date().getFullYear()}, All rights reserved.</p>
         </div>
